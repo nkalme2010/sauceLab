@@ -1,0 +1,465 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>46/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Oct 23 09:54:10 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>457 seconds (457229 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyTitleTest()'><b>verifyTitleTest</b><br>Test class: TestCase.LoginPage1Test<br>Test method: Title Test</td>
+<td><div><pre>org.testng.internal.thread.ThreadTimeoutException: Method TestCase.LoginPage1Test.verifyTitleTest() didn&apos;t finish within the time-out 5000
+	at java.base@11.0.15.1/java.io.RandomAccessFile.readBytes(Native Method)
+	at java.base@11.0.15.1/java.io.RandomAccessFile.read(RandomAccessFile.java:407)
+	at java.base@11.0.15.1/java.io.RandomAccessFile.readFully(RandomAccessFile.java:471)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$Source.readFullyAt(ZipFile.java:1330)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$ZipFileInputStream.initDataOffset(ZipFile.java:996)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:1011)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:469)
+	at java.base@11.0.15.1/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:159)
+	at java.base@11.0.15.1/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base@11.0.15.1/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base@11.0.15.1/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base@11.0.15.1/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base@11.0.15.1/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base@11.0.15.1/java.io.Reader.read(Reader.java:229)
+	at java.base@11.0.15.1/java.util.Properties$LineReader.readLine(Properties.java:504)
+	at java.base@11.0.15.1/java.util.Properties.load0(Properties.java:419)
+	at java.base@11.0.15.1/java.util.Properties.load(Properties.java:382)
+	at java.base@11.0.15.1/java.util.PropertyResourceBundle.&lt;init&gt;(PropertyResourceBundle.java:200)
+	at java.base@11.0.15.1/java.util.PropertyResourceBundle.&lt;init&gt;(PropertyResourceBundle.java:177)
+	at java.base@11.0.15.1/java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:3235)
+	at java.base@11.0.15.1/java.util.ResourceBundle.loadBundle(ResourceBundle.java:1994)
+	at java.base@11.0.15.1/java.util.ResourceBundle.findBundle(ResourceBundle.java:1776)
+	at java.base@11.0.15.1/java.util.ResourceBundle.findBundle(ResourceBundle.java:1728)
+	at java.base@11.0.15.1/java.util.ResourceBundle.findBundle(ResourceBundle.java:1728)
+	at java.base@11.0.15.1/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1662)
+	at java.base@11.0.15.1/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1593)
+	at java.base@11.0.15.1/java.util.ResourceBundle.getBundle(ResourceBundle.java:1284)
+	at app//org.apache.xmlbeans.impl.regex.RegexParser.setLocale(RegexParser.java:86)
+	at app//org.apache.xmlbeans.impl.regex.RegexParser.&lt;init&gt;(RegexParser.java:79)
+	at app//org.apache.xmlbeans.impl.regex.ParserForXMLSchema.&lt;init&gt;(ParserForXMLSchema.java:29)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.setPattern(RegularExpression.java:2261)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.setPattern(RegularExpression.java:2278)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.setPattern(RegularExpression.java:2274)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.&lt;init&gt;(RegularExpression.java:2225)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.&lt;init&gt;(SchemaRegularExpression.java:27)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.&lt;init&gt;(SchemaRegularExpression.java:23)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression$1.&lt;init&gt;(SchemaRegularExpression.java:44)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.buildKnownPatternMap(SchemaRegularExpression.java:43)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.&lt;clinit&gt;(SchemaRegularExpression.java:38)
+	at app//org.apache.xmlbeans.impl.schema.BuiltinSchemaTypeSystem.fillInType(BuiltinSchemaTypeSystem.java:1008)
+	at app//org.apache.xmlbeans.impl.schema.BuiltinSchemaTypeSystem.&lt;clinit&gt;(BuiltinSchemaTypeSystem.java:208)
+	at app//org.apache.xmlbeans.XmlBeans.getNoType(XmlBeans.java:504)
+	at app//org.apache.xmlbeans.XmlBeans.&lt;clinit&gt;(XmlBeans.java:517)
+	at app//org.apache.xmlbeans.impl.schema.SchemaTypeLoaderBase.&lt;clinit&gt;(SchemaTypeLoaderBase.java:38)
+	at app//org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument.&lt;clinit&gt;(ThemeDocument.java:23)
+	at app//org.apache.poi.xssf.model.ThemesTable.readFrom(ThemesTable.java:119)
+	at app//org.apache.poi.xssf.model.ThemesTable.&lt;init&gt;(ThemesTable.java:87)
+	at app//org.apache.poi.xssf.usermodel.XSSFRelation$$Lambda$620/0x0000000100487040.init(Unknown Source)
+	at app//org.apache.poi.ooxml.POIXMLFactory.createDocumentPart(POIXMLFactory.java:61)
+	at app//org.apache.poi.ooxml.POIXMLDocumentPart.read(POIXMLDocumentPart.java:661)
+	at app//org.apache.poi.ooxml.POIXMLDocument.load(POIXMLDocument.java:165)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:260)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.createWorkbook(XSSFWorkbookFactory.java:118)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.create(XSSFWorkbookFactory.java:98)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.create(XSSFWorkbookFactory.java:36)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.lambda$create$2(WorkbookFactory.java:224)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory$$Lambda$543/0x0000000100427040.create(Unknown Source)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.wp(WorkbookFactory.java:329)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:224)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:185)
+	at app//Utility.ReadData.excelFile(ReadData.java:16)
+	at app//TestCase.LoginPage1Test.verifyTitleTest(LoginPage1Test.java:28)
+	at java.base@11.0.15.1/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15.1/java.lang.Thread.run(Thread.java:834)
+... Removed 8 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1367421029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1367421029'><pre>org.testng.internal.thread.ThreadTimeoutException: Method TestCase.LoginPage1Test.verifyTitleTest() didn&apos;t finish within the time-out 5000
+	at java.base@11.0.15.1/java.io.RandomAccessFile.readBytes(Native Method)
+	at java.base@11.0.15.1/java.io.RandomAccessFile.read(RandomAccessFile.java:407)
+	at java.base@11.0.15.1/java.io.RandomAccessFile.readFully(RandomAccessFile.java:471)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$Source.readFullyAt(ZipFile.java:1330)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$ZipFileInputStream.initDataOffset(ZipFile.java:996)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:1011)
+	at java.base@11.0.15.1/java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:469)
+	at java.base@11.0.15.1/java.util.zip.InflaterInputStream.read(InflaterInputStream.java:159)
+	at java.base@11.0.15.1/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base@11.0.15.1/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base@11.0.15.1/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base@11.0.15.1/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base@11.0.15.1/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base@11.0.15.1/java.io.Reader.read(Reader.java:229)
+	at java.base@11.0.15.1/java.util.Properties$LineReader.readLine(Properties.java:504)
+	at java.base@11.0.15.1/java.util.Properties.load0(Properties.java:419)
+	at java.base@11.0.15.1/java.util.Properties.load(Properties.java:382)
+	at java.base@11.0.15.1/java.util.PropertyResourceBundle.&lt;init&gt;(PropertyResourceBundle.java:200)
+	at java.base@11.0.15.1/java.util.PropertyResourceBundle.&lt;init&gt;(PropertyResourceBundle.java:177)
+	at java.base@11.0.15.1/java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:3235)
+	at java.base@11.0.15.1/java.util.ResourceBundle.loadBundle(ResourceBundle.java:1994)
+	at java.base@11.0.15.1/java.util.ResourceBundle.findBundle(ResourceBundle.java:1776)
+	at java.base@11.0.15.1/java.util.ResourceBundle.findBundle(ResourceBundle.java:1728)
+	at java.base@11.0.15.1/java.util.ResourceBundle.findBundle(ResourceBundle.java:1728)
+	at java.base@11.0.15.1/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1662)
+	at java.base@11.0.15.1/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1593)
+	at java.base@11.0.15.1/java.util.ResourceBundle.getBundle(ResourceBundle.java:1284)
+	at app//org.apache.xmlbeans.impl.regex.RegexParser.setLocale(RegexParser.java:86)
+	at app//org.apache.xmlbeans.impl.regex.RegexParser.&lt;init&gt;(RegexParser.java:79)
+	at app//org.apache.xmlbeans.impl.regex.ParserForXMLSchema.&lt;init&gt;(ParserForXMLSchema.java:29)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.setPattern(RegularExpression.java:2261)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.setPattern(RegularExpression.java:2278)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.setPattern(RegularExpression.java:2274)
+	at app//org.apache.xmlbeans.impl.regex.RegularExpression.&lt;init&gt;(RegularExpression.java:2225)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.&lt;init&gt;(SchemaRegularExpression.java:27)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.&lt;init&gt;(SchemaRegularExpression.java:23)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression$1.&lt;init&gt;(SchemaRegularExpression.java:44)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.buildKnownPatternMap(SchemaRegularExpression.java:43)
+	at app//org.apache.xmlbeans.impl.regex.SchemaRegularExpression.&lt;clinit&gt;(SchemaRegularExpression.java:38)
+	at app//org.apache.xmlbeans.impl.schema.BuiltinSchemaTypeSystem.fillInType(BuiltinSchemaTypeSystem.java:1008)
+	at app//org.apache.xmlbeans.impl.schema.BuiltinSchemaTypeSystem.&lt;clinit&gt;(BuiltinSchemaTypeSystem.java:208)
+	at app//org.apache.xmlbeans.XmlBeans.getNoType(XmlBeans.java:504)
+	at app//org.apache.xmlbeans.XmlBeans.&lt;clinit&gt;(XmlBeans.java:517)
+	at app//org.apache.xmlbeans.impl.schema.SchemaTypeLoaderBase.&lt;clinit&gt;(SchemaTypeLoaderBase.java:38)
+	at app//org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument.&lt;clinit&gt;(ThemeDocument.java:23)
+	at app//org.apache.poi.xssf.model.ThemesTable.readFrom(ThemesTable.java:119)
+	at app//org.apache.poi.xssf.model.ThemesTable.&lt;init&gt;(ThemesTable.java:87)
+	at app//org.apache.poi.xssf.usermodel.XSSFRelation$$Lambda$620/0x0000000100487040.init(Unknown Source)
+	at app//org.apache.poi.ooxml.POIXMLFactory.createDocumentPart(POIXMLFactory.java:61)
+	at app//org.apache.poi.ooxml.POIXMLDocumentPart.read(POIXMLDocumentPart.java:661)
+	at app//org.apache.poi.ooxml.POIXMLDocument.load(POIXMLDocument.java:165)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:260)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.createWorkbook(XSSFWorkbookFactory.java:118)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.create(XSSFWorkbookFactory.java:98)
+	at app//org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.create(XSSFWorkbookFactory.java:36)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.lambda$create$2(WorkbookFactory.java:224)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory$$Lambda$543/0x0000000100427040.create(Unknown Source)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.wp(WorkbookFactory.java:329)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:224)
+	at app//org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:185)
+	at app//Utility.ReadData.excelFile(ReadData.java:16)
+	at app//TestCase.LoginPage1Test.verifyTitleTest(LoginPage1Test.java:28)
+	at java.base@11.0.15.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.15.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.15.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.15.1/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at app//org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:44)
+	at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:72)
+	at app//org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:10)
+	at java.base@11.0.15.1/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.15.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.15.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.15.1/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>5</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCase.Page3Test.verifyCheckoutTest()'><b>verifyCheckoutTest</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyItemTotalTest()'><b>verifyItemTotalTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyNoOfProductsTest()'><b>verifyNoOfProductsTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyLogo2()'><b>verifyLogo2</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page4Test.verifyFirstNameTest()'><b>verifyFirstNameTest</b><br>Test class: TestCase.Page4Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page4Test@4b45a2f5</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifyLargeLogoTest()'><b>verifyLargeLogoTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyLogoutTest()'><b>verifyLogoutTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyLogo1Test()'><b>verifyLogo1Test</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyProductName5Test()'><b>verifyProductName5Test</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyLoginToAppIsSuccessful2Test()'><b>verifyLoginToAppIsSuccessful2Test</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyFinishBtn()'><b>verifyFinishBtn</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyProductName4Test()'><b>verifyProductName4Test</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyThankuTextTest()'><b>verifyThankuTextTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifySmallLogoTest()'><b>verifySmallLogoTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifyAdd6ProductsTest()'><b>verifyAdd6ProductsTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>2</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyProductName1Test()'><b>verifyProductName1Test</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page4Test.verifyPostalCodeTest()'><b>verifyPostalCodeTest</b><br>Test class: TestCase.Page4Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page4Test@4b45a2f5</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyAllItemsLinkTest()'><b>verifyAllItemsLinkTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifylinkedinTest()'><b>verifylinkedinTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyShippingInfoTest()'><b>verifyShippingInfoTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyCheckoutCompleteLabelTest()'><b>verifyCheckoutCompleteLabelTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyProductName6Test()'><b>verifyProductName6Test</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyTaxTest()'><b>verifyTaxTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyAboutLinkTest()'><b>verifyAboutLinkTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>6</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyUrlTest()'><b>verifyUrlTest</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyNoOfProductsTest()'><b>verifyNoOfProductsTest</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyLoginToAppIsSuccessfulTest()'><b>verifyLoginToAppIsSuccessfulTest</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>2</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyProductName3Test()'><b>verifyProductName3Test</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyTotalTest()'><b>verifyTotalTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifypaymentInfoTest()'><b>verifypaymentInfoTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyLoginToAppTest()'><b>verifyLoginToAppTest</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>1</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyUrlTest()'><b>verifyUrlTest</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page4Test.verifyPage4LabelTest()'><b>verifyPage4LabelTest</b><br>Test class: TestCase.Page4Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page4Test@4b45a2f5</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyProductName2Test()'><b>verifyProductName2Test</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifyFacebookTest()'><b>verifyFacebookTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifyTwiterTest()'><b>verifyTwiterTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page2Test.verifyNextPageOpeningTest()'><b>verifyNextPageOpeningTest</b><br>Test class: TestCase.Page2Test</td>
+<td></td>
+<td>1</td>
+<td>TestCase.Page2Test@38cee291</td></tr>
+<tr>
+<td title='TestCase.Page3Test.verifyRemovalOf2ProductsTest()'><b>verifyRemovalOf2ProductsTest</b><br>Test class: TestCase.Page3Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page3Test@791f145a</td></tr>
+<tr>
+<td title='TestCase.Page4Test.verifyLastNameTest()'><b>verifyLastNameTest</b><br>Test class: TestCase.Page4Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page4Test@4b45a2f5</td></tr>
+<tr>
+<td title='TestCase.Page5Test.verifyOverviewLabelTest()'><b>verifyOverviewLabelTest</b><br>Test class: TestCase.Page5Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page5Test@f09733f</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyHomeBtnClickTest()'><b>verifyHomeBtnClickTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.Page4Test.verifyContinueBtnTest()'><b>verifyContinueBtnTest</b><br>Test class: TestCase.Page4Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page4Test@4b45a2f5</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyorderTextTest()'><b>verifyorderTextTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.LoginPage1Test.verifyUrlTest()'><b>verifyUrlTest</b><br>Test class: TestCase.LoginPage1Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.LoginPage1Test@1e0b4072</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyHorseLogoTest()'><b>verifyHorseLogoTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+<tr>
+<td title='TestCase.Page6Test.verifyHomeBtnTest()'><b>verifyHomeBtnTest</b><br>Test class: TestCase.Page6Test</td>
+<td></td>
+<td>0</td>
+<td>TestCase.Page6Test@47d9a273</td></tr>
+</table><p>
+</body>
+</html>
